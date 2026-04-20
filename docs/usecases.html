@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大家都用 AI 干什么 · AI Token 研究</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-dark.min.css">
+<style>
+  body { background: #0f1117; margin: 0; font-family: -apple-system,'Segoe UI',sans-serif; }
+  nav { background: #1a1d27; border-bottom: 1px solid #2a2d3a; padding: 12px 24px; font-size: 0.85rem; }
+  nav a { color: #38bdf8; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .markdown-body { max-width: 860px; margin: 0 auto; padding: 40px 24px 80px; background: #0f1117; color: #e2e8f0; }
+  .markdown-body h1,h2,h3 { border-bottom-color: #2a2d3a; }
+  .markdown-body table { display: table; width: 100%; }
+  .markdown-body pre { background: #1a1d27; }
+  .markdown-body code { background: #1a1d27; }
+  #md-content { display: none; }
+</style>
+</head>
+<body>
+<nav><a href="index.html">← 首页</a> &nbsp;/&nbsp; <a href="browser.html">数据浏览器</a></nav>
+<div class="markdown-body" id="output"><p style="color:#94a3b8;padding:40px 0;text-align:center">加载中…</p></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<script>
+fetch('usecases.md').then(r=>r.text()).then(md=>{
+  document.getElementById('output').innerHTML = marked.parse(md);
+}).catch(()=>{
+  document.getElementById('output').innerHTML = '<p style="color:#f87171">加载失败</p>';
+});
+</script>
+</body>
+</html>
